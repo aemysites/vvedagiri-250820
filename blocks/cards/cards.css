@@ -25,3 +25,174 @@
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+.cards.cards33 {
+  background: #f7f8f9;
+  padding: 56px 0;
+}
+
+.cards.cards33 > ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  place-items: start stretch;
+}
+
+.cards.cards33 > ul > li {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #fff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: none;
+  overflow: hidden;
+  min-height: 200px;
+  padding: 0;
+}
+
+/* Image column */
+.cards.cards33 .cards-card-image {
+  flex: 0 0 180px;
+  max-width: 180px;
+  min-width: 180px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 28px 0 28px 28px;
+  background: none;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.cards.cards33 .cards-card-image img {
+  display: block;
+  width: 152px;
+  height: 152px;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Text column */
+.cards.cards33 .cards-card-body {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 28px 32px 28px 36px;
+  margin: 0;
+}
+
+/* Label and time row */
+.cards.cards33 .cards-card-body p:first-child,
+.cards.cards33 .cards-card-body p:nth-child(2) {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+/* Label pill */
+.cards.cards33 .cards-card-body p:first-child {
+  background: #e3e4e8;
+  color: #444;
+  font-size: 13px;
+  letter-spacing: 0.01em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 999px;
+  padding: 2px 14px;
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Time */
+.cards.cards33 .cards-card-body p:nth-child(2) {
+  color: #757575;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+/* Title */
+.cards.cards33 .cards-card-body h3 {
+  margin: 14px 0 9px;
+  font-size: 23px;
+  font-family: var(--heading-font-family);
+  font-weight: 600;
+  color: #202124;
+  letter-spacing: 0.01em;
+  line-height: 1.17;
+  text-transform: none;
+}
+
+/* Description */
+.cards.cards33 .cards-card-body p:nth-child(4) {
+  font-size: 15px;
+  color: #444;
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+
+/* Read link */
+.cards.cards33 .cards-card-body p:last-child {
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+  margin-top: auto;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Responsive adjustments */
+@media (width <= 900px) {
+  .cards.cards33 > ul {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .cards.cards33 > ul > li {
+    flex-direction: column;
+    border-radius: 16px;
+    min-height: 0;
+  }
+
+  .cards.cards33 .cards-card-image {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 20px 20px 0;
+    border-radius: 16px 16px 0 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .cards.cards33 .cards-card-image img {
+    width: 100%;
+    height: 180px;
+    min-width: 0;
+    border-radius: 16px 16px 0 0;
+    aspect-ratio: 4/3;
+  }
+
+  .cards.cards33 .cards-card-body {
+    padding: 22px 16px 28px;
+    margin: 0;
+  }
+}
